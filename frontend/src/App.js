@@ -4,17 +4,12 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  useRouteMatch,
-  useParams
 } from 'react-router-dom'
+import {LandingPage, ContactUs, About, Register, Login} from './components/LandingPage'
 
 function App() {
   return (
     <Router>
-      <div>
-        <h3>Home</h3>
-      </div>
       <Switch>
         <Route path='/contactUs'>
           <ContactUs />
@@ -22,8 +17,14 @@ function App() {
         <Route path="/about">
           <About />
         </Route>
+        <Route path="/register">
+          <Register />
+        </Route>
+        <Route path="/login" >
+          <Login />
+        </Route>
         <Route path='/'>
-          <Home />
+          <LandingPage />
         </Route>
       </Switch>
     </Router>
